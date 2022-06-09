@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myfirstrcofnginx
+  labels:
+    env: test
+    bak: chodi
+spec:
+  template:
+    metadata:
+      name: nginxrs
+      labels:
+        test: yes
+    spec:
+      containers:
+        - name: dhondujustchill
+          image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      test: yes
+      env: test
