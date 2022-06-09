@@ -3,14 +3,15 @@ kind: ReplicaSet
 metadata:
   name: myfirstrcofnginx
   labels:
+    type: frontend
     env: test
-    bak: chodi
 spec:
   template:
     metadata:
       name: nginxrs
       labels:
-        test: yes
+        type: frontend
+        env: test
     spec:
       containers:
         - name: dhondujustchill
@@ -18,5 +19,5 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      test: yes
+      type: frontend
       env: test
