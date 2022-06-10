@@ -4,7 +4,7 @@ metadata:
   name: myfirstrcofnginx
   labels:
     type: frontend
-    env: rbhlinux3
+    env: rbhlinux4
 spec:
   template:
     metadata:
